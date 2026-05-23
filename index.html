@@ -138,7 +138,22 @@
     /* ===== About ===== */
     .about {
       border-top: 1px solid rgba(255,255,255,0.1);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
     }
+    .about-text { order: 1; }
+    .about-image { order: 2; }
+    .about-image img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 8px;
+      filter: drop-shadow(0 30px 60px rgba(214,174,129,0.25));
+      transition: transform 0.6s ease;
+    }
+    .about-image img:hover { transform: scale(1.03); }
 
     /* ===== Ezra ===== */
     .ezra {
@@ -226,10 +241,14 @@
       nav { padding: 20px 24px; }
       section.block { padding: 100px 24px; }
       .hero { padding: 100px 24px 60px; }
+      .about,
       .ezra {
         grid-template-columns: 1fr;
         gap: 48px;
       }
+      .about-image { order: 1; }
+      .about-text { order: 2; }
+      .about-image img { max-width: 100%; margin: 0 auto; display: block; }
       .ezra-image { order: 1; }
       .ezra-text { order: 2; }
       .ezra-image img { max-width: 100%; margin: 0 auto; display: block; }
@@ -240,11 +259,11 @@
 <body>
 
   <nav>
-    <div class="logo">רוני</div>
+    <div class="logo">רוני ירושלמי</div>
     <div>
       <a href="#about">עליי</a>
       &nbsp;&nbsp;&nbsp;
-      <a href="#ezra">עזרא</a>
+      <a href="#ezra">עזרא העוזר שלי</a>
       &nbsp;&nbsp;&nbsp;
       <a href="#contact">צור קשר</a>
     </div>
@@ -265,11 +284,16 @@
   </header>
 
   <section class="block about reveal" id="about">
-    <div class="section-label">מי אני</div>
-    <h2 class="section-title">הסיפור שלי</h2>
-    <p class="section-body">
-      אני דוקטורנטית לקרימינולוגיה, מרצה ואשת יזמות הפועלת בנקודת המפגש שבין אקדמיה, אנשים והשפעה. במהלך השנים יצרתי שיתופי פעולה בין מומחים, יוצרים וטאלנטים לבין מוסדות אקדמיים, והפכתי ידע מקצועי לתוכניות, הכשרות ומיזמים בעלי ערך והשפעה בעולם האמיתי. אני משלבת בין חשיבה אסטרטגית, תוכן, חדשנות וחיבורים אנושיים כדי לבנות רעיונות שאנשים לא רק זוכרים — אלא גם רוצים להיות חלק מהם.
-    </p>
+    <div class="about-text">
+      <div class="section-label">מי אני</div>
+      <h2 class="section-title">הסיפור שלי</h2>
+      <p class="section-body">
+        אני דוקטורנטית לקרימינולוגיה, מרצה ואשת יזמות הפועלת בנקודת המפגש שבין אקדמיה, אנשים והשפעה. במהלך השנים יצרתי שיתופי פעולה בין מומחים, יוצרים וטאלנטים לבין מוסדות אקדמיים, והפכתי ידע מקצועי לתוכניות, הכשרות ומיזמים בעלי ערך והשפעה בעולם האמיתי. אני משלבת בין חשיבה אסטרטגית, תוכן, חדשנות וחיבורים אנושיים כדי לבנות רעיונות שאנשים לא רק זוכרים — אלא גם רוצים להיות חלק מהם.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="assets/Roni%20-headshot.jpeg" alt="רוני ירושלמי" />
+    </div>
   </section>
 
   <section class="block ezra reveal" id="ezra">
